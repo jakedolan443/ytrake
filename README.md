@@ -3,7 +3,7 @@
 GUI tool to embed metadata for albums on Youtube with `youtube-dl`.
 Requires youtube-dl v2021.06.06.
 
-![](https://i.imgur.com/HGDk1By.png)
+![](https://i.imgur.com/XQkGqj9.png)
 
 Post-processing Album metadata:
 
