@@ -56,7 +56,7 @@ def stream_process(process, stat_var=None):
     return go
 
 def download(playlist, save_dir, artist, album, stat_var):
-    process = subprocess.Popen("".join(['youtube-dl --add-metadata --postprocessor-args "', "-metadata artist='{}' -metadata album='{}' -metadata album_artist='{}'".format(artist, album, artist), '" --extract-audio --audio-format mp3 --yes-playlist "{}" -o "{}/'.format(playlist, save_dir),'%(title)s.%(ext)s"']), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    process = subprocess.Popen("".join(['youtube-dl --add-metadata --postprocessor-args "', "-metadata artist='{}' -metadata album='{}' -metadata album_artist='{}'".format(artist, album, artist), '" --extract-audio --audio-format best --yes-playlist "{}" -o "{}/'.format(playlist, save_dir),'%(title)s.%(ext)s"']), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     while stream_process(process, stat_var=stat_var):
         time.sleep(0.001)
     
