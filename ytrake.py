@@ -24,7 +24,7 @@ class Entrybox(tk.Frame):
     def __init__(self, *args, title="", default_val=False):
         tk.Frame.__init__(self, *args)
         title_label = tk.Label(self, text=title, font='Verdana, 10 italic'); title_label.pack(anchor='w')
-        self.entry_box = tk.Text(self, height=1, font='Verdana, 10', bg='#FFFFFF'); self.entry_box.pack()
+        self.entry_box = tk.Text(self, height=1, font='Verdana, 10', bg='white'); self.entry_box.pack()
         self.entry_box.bind('<Return>', self.dummy_function)
         self.entry_box.bind("<Control-Key-a>", self.select_all)
         if default_val:
