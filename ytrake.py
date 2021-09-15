@@ -87,7 +87,7 @@ class Mainframe(tk.Frame):
     def __init_download(self, playlist="", save_dir="", artist="", album="", stat_var=None):
         artist, album = re.sub(r'[^\w]', ' ', artist), re.sub(r'[^\w]', ' ', album)
         playlist = playlist.replace("\n", ""); save_dir = save_dir.replace("\n", ""); artist = artist.replace("\n", ""); album = album.replace("\n", "")
-        stat_var.set("downloading....")
+        stat_var.set("downloading ...")
         threading.Thread(target=download, args=(playlist, save_dir, artist, album, stat_var, )).start()
 
 
